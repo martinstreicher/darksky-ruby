@@ -1,6 +1,4 @@
-[![Code Climate](https://codeclimate.com/github/martinstreicher/darksky-ruby/badges/gpa.svg)](https://codeclimate.com/github/martinstreicher/darksky-ruby)
-
-[![Test Coverage](https://codeclimate.com/github/martinstreicher/darksky-ruby/badges/coverage.svg)](https://codeclimate.com/github/martinstreicher/darksky-ruby/coverage)
+[![Code Climate](https://codeclimate.com/github/martinstreicher/darksky-ruby/badges/gpa.svg)](https://codeclimate.com/github/martinstreicher/darksky-ruby) [![Test Coverage](https://codeclimate.com/github/martinstreicher/darksky-ruby/badges/coverage.svg)](https://codeclimate.com/github/martinstreicher/darksky-ruby/coverage) [![Build Status](https://semaphoreci.com/api/v1/projects/c7accaa7-f062-452c-ada6-621c1c59435b/552121/badge.svg)](https://semaphoreci.com/locomotivellc/darksky-ruby)
 
 
 darksky
