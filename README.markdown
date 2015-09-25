@@ -1,3 +1,8 @@
+[![Code Climate](https://codeclimate.com/github/martinstreicher/darksky-ruby/badges/gpa.svg)](https://codeclimate.com/github/martinstreicher/darksky-ruby)
+
+[![Test Coverage](https://codeclimate.com/github/martinstreicher/darksky-ruby/badges/coverage.svg)](https://codeclimate.com/github/martinstreicher/darksky-ruby/coverage)
+
+
 darksky
 =======
 
