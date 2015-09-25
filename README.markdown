@@ -10,7 +10,6 @@ darksky
 Sky API v2](<https://developer.forecast.io/docs/v2>) for geographic points
 inside the United States.
 
- 
 
 Installation
 ------------
@@ -18,7 +17,6 @@ Installation
 Install it from your shell:
 
 `$ gem install darksky`
-
  
 
 Or install it via *bundler*. Open your *Gemfile* and add the line:
@@ -26,13 +24,11 @@ Or install it via *bundler*. Open your *Gemfile* and add the line:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 gem 'darksky'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
  
 
 And then run:
 
 `$ bundle install`
-
  
 
 Usage
@@ -88,7 +84,6 @@ error occurred. The hash resembles the following sample:
 The exact contents of the hash are explained in detail in the [API
 docs](<https://developer.forecast.io/docs/v2>).
 
- 
 
 Contributing to darksky
 -----------------------
@@ -112,7 +107,6 @@ Contributing to darksky
     to have your own version, or is otherwise necessary, that is fine, but
     please isolate to its own commit so I can cherry-pick around it.
 
- 
 
 Copyright
 ---------
