@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ['David Czarnecki', 'Martin Streicher']
   s.email       = ['me@davidczarnecki.com', 'martin.streicher@gmail.com']
   s.homepage    = 'https://github.com/martinstreicher/darksky-ruby'
-  s.summary     = %q{Ruby gem to retrieve data from the Dark Sky API}
-  s.description = %q{Ruby gem to retrieve data from the Dark Sky API}
+  s.summary     = %q{Ruby gem to retrieve data from the Dark Sky API v2}
+  s.description = %q{Ruby gem to retrieve data from the Dark Sky API v2}
 
   s.rubyforge_project = 'darksky'
 

@@ -1,46 +1,116 @@
-# darksky
+darksky
+=======
 
-Ruby gem for retrieving data from the [Dark Sky API](http://darkskyapp.com/api/). The Dark Sky API lets you query
-for short-term precipitation forecast data at geographical points inside the United States.
+*darksky* is a Ruby gem to retrieve short-term precipitation data from the [Dark
+Sky API v2](<https://developer.forecast.io/docs/v2>) for geographic points
+inside the United States.
 
-## Installation
+ 
 
-`gem install darksky`
+Installation
+------------
 
-or in your `Gemfile`
+Install it from your shell:
 
-```ruby
+`$ gem install darksky`
+
+ 
+
+Or install it via *bundler*. Open your *Gemfile* and add the line:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 gem 'darksky'
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Usage
+ 
 
-```ruby
+And then run:
+
+`$ bundle install`
+
+ 
+
+Usage
+-----
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 darksky = Darksky::API.new('this-is-your-dark-sky-api-key')
 
 # Returns a forecast for the next hour at a given location.
 forecast = darksky.forecast('42.7243','-73.6927')
 
-# Returns a brief forecast for the next hour at a given location.
-brief_forecast = darksky.brief_forecast('42.7243','-73.6927')
+# Returns a forecast for the next hour at a given location.
+forecast = darksky.forecast('42.7243','-73.6927', Time.now.to_i)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Returns forecasts for a collection of arbitrary points.
-precipitation = darksky.precipitation(['42.7','-73.6',1325607100,'42.0','-73.0',1325607791])
+The result, `forecast`, will either be a hash containing data or `nil` if an
+error occurred. The hash resembles the following sample:
 
-# Returns a list of interesting storms happening right now.
-interesting_storms = darksky.interesting
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+   "latitude" => 42.7243,
+  "longitude" => -73.6927,
+   "timezone" => "America/New_York",
+     "offset" => -4,
+  "currently" => {
+                   "time" => 1443198595,
+                "summary" => "Mostly Cloudy",
+                   "icon" => "partly-cloudy-day",
+        "precipIntensity" => 0,
+      "precipProbability" => 0,
+            "temperature" => 66.71,
+    "apparentTemperature" => 66.71,
+               "dewPoint" => 48.95,
+               "humidity" => 0.53,
+              "windSpeed" => 1.13,
+            "windBearing" => 148,
+             "visibility" => 10,
+             "cloudCover" => 0.62,
+               "pressure" => 1029.02,
+                  "ozone" => 266.53
+  },
+  "minutely" => { [...]
+  },
+  "hourly" => { [...]
+  },
+  "daily" => { [...]
+  },
+  "flags" => { [...]
+  }
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-## Contributing to darksky
+The exact contents of the hash are explained in detail in the [API
+docs](<https://developer.forecast.io/docs/v2>).
 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+ 
 
-## Copyright
+Contributing to darksky
+-----------------------
 
-Copyright (c) 2012-2014 David Czarnecki. See LICENSE.txt for further details.
+-   Check out the latest master to make sure the feature hasn't been implemented
+    or the bug hasn't been fixed yet
+
+-   Check out the issue tracker to make sure someone already hasn't requested it
+    and/or contributed it
+
+-   Fork the project
+
+-   Start a feature/bugfix branch
+
+-   Commit and push until you are happy with your contribution
+
+-   Make sure to add tests for it. This is important so I don't break it in a
+    future version unintentionally.
+
+-   Please try not to mess with the Rakefile, version, or history. If you want
+    to have your own version, or is otherwise necessary, that is fine, but
+    please isolate to its own commit so I can cherry-pick around it.
+
+ 
+
+Copyright
+---------
+
+Copyright (c) 2012-2015 David Czarnecki, Martin Streicher. See LICENSE.txt for
+further details.
