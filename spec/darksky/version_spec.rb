@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Darksky::VERSION' do
-  it 'should be the correct version' do
-    Darksky::VERSION.should == '1.0.5'
+  specify 'should be the correct version' do
+    expect(Darksky::VERSION).to eq('2.0.0')
   end
 end

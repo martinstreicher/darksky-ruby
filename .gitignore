@@ -1,7 +1,11 @@
 *.gem
-.bundle
-Gemfile.lock
-pkg/*
-.yardoc
-doc
 *.rdb
+.bundle
+.ruby-gemset
+.ruby-version
+.rvmrc
+.yardoc
+Gemfile.lock
+doc
+pkg/*
+

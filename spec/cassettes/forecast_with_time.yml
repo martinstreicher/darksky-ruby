@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.forecast.io/forecast/your_api_key/42.7243,-73.6927,1443199409
+    uri: https://api.forecast.io/forecast/your_api_key/42.7243,-73.6927,1443199368
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Fri, 25 Sep 2015 16:43:30 GMT
+      - Fri, 25 Sep 2015 16:43:29 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -27,21 +27,21 @@ http_interactions:
       X-Powered-By:
       - Express
       X-Hostname:
-      - sun
+      - world
       X-Forecast-API-Calls:
-      - '17'
+      - '16'
       Cache-Control:
-      - max-age=8190
+      - max-age=8191
       Expires:
       - Fri, 25 Sep 2015 19:00:00 +0000
       ETag:
-      - '"-123188984"'
+      - '"1901518770"'
       X-Response-Time:
-      - 105ms
+      - 57ms
     body:
       encoding: UTF-8
-      string: '{"latitude":42.7243,"longitude":-73.6927,"timezone":"America/New_York","offset":-4,"currently":{"time":1443199409,"summary":"Mostly
-        Cloudy","icon":"partly-cloudy-day","precipIntensity":0,"precipProbability":0,"temperature":67.29,"apparentTemperature":67.29,"dewPoint":48.74,"humidity":0.51,"windSpeed":1.29,"windBearing":154,"visibility":10,"cloudCover":0.66,"pressure":1028.98,"ozone":266.56},"minutely":{"data":[{"time":1443199380,"precipIntensity":0,"precipProbability":0},{"time":1443199440,"precipIntensity":0,"precipProbability":0}]},"hourly":{"summary":"Partly
+      string: '{"latitude":42.7243,"longitude":-73.6927,"timezone":"America/New_York","offset":-4,"currently":{"time":1443199368,"summary":"Mostly
+        Cloudy","icon":"partly-cloudy-day","precipIntensity":0,"precipProbability":0,"temperature":67.26,"apparentTemperature":67.26,"dewPoint":48.75,"humidity":0.51,"windSpeed":1.29,"windBearing":154,"visibility":10,"cloudCover":0.66,"pressure":1028.98,"ozone":266.55},"minutely":{"data":[{"time":1443199320,"precipIntensity":0,"precipProbability":0},{"time":1443199380,"precipIntensity":0,"precipProbability":0}]},"hourly":{"summary":"Partly
         cloudy throughout the day.","icon":"partly-cloudy-day","data":[{"time":1443153600,"summary":"Partly
         Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":56.67,"apparentTemperature":56.67,"dewPoint":47.84,"humidity":0.72,"windSpeed":3.03,"windBearing":358,"visibility":9.36,"cloudCover":0.31,"pressure":1029.04,"ozone":267.61},{"time":1443157200,"summary":"Partly
         Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":55.51,"apparentTemperature":55.51,"dewPoint":47.01,"humidity":0.73,"windSpeed":2.63,"windBearing":1,"visibility":9.76,"cloudCover":0.43,"pressure":1029.21,"ozone":268.79},{"time":1443160800,"summary":"Partly
@@ -67,9 +67,9 @@ http_interactions:
         Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":61,"apparentTemperature":61,"dewPoint":48.91,"humidity":0.64,"windSpeed":3,"windBearing":36,"visibility":10,"cloudCover":0.47,"pressure":1028.11,"ozone":281.23},{"time":1443232800,"summary":"Partly
         Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":59.13,"apparentTemperature":59.13,"dewPoint":48.51,"humidity":0.68,"windSpeed":2.23,"windBearing":49,"visibility":10,"cloudCover":0.47,"pressure":1028.35,"ozone":281.82},{"time":1443236400,"summary":"Partly
         Cloudy","icon":"partly-cloudy-night","precipIntensity":0,"precipProbability":0,"temperature":57.49,"apparentTemperature":57.49,"dewPoint":47.9,"humidity":0.7,"windSpeed":1.89,"windBearing":43,"visibility":10,"cloudCover":0.47,"pressure":1028.58,"ozone":282.16}]},"daily":{"data":[{"time":1443153600,"summary":"Partly
-        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1443177978,"sunsetTime":1443221360,"moonPhase":0.41,"precipIntensity":0,"precipIntensityMax":0,"precipProbability":0,"temperatureMin":49.06,"temperatureMinTime":1443175200,"temperatureMax":71.39,"temperatureMaxTime":1443211200,"apparentTemperatureMin":49.06,"apparentTemperatureMinTime":1443175200,"apparentTemperatureMax":71.39,"apparentTemperatureMaxTime":1443211200,"dewPoint":47.31,"humidity":0.64,"windSpeed":0.68,"windBearing":38,"visibility":9.83,"cloudCover":0.44,"pressure":1028.65,"ozone":271.38}]},"flags":{"sources":["isd","sref","fnmoc","rtma","rap","nam","cmc","gfs","darksky","madis","lamp"],"isd-stations":["725180-14735","744994-04741","999999-04741","999999-14735","999999-14796"],"darksky-stations":["KENX"],"madis-stations":["APBN6","AS107","AU087","C5574","C8192","D3501","D6593","D8530","D9775","E0122","E0250","E0288","E2695","E5102","KALB","NY002"],"lamp-stations":["KALB","KAQW","KDDH","KPSF","KSCH"],"units":"us"}}'
+        cloudy throughout the day.","icon":"partly-cloudy-day","sunriseTime":1443177978,"sunsetTime":1443221360,"moonPhase":0.41,"precipIntensity":0,"precipIntensityMax":0,"precipProbability":0,"temperatureMin":49.06,"temperatureMinTime":1443175200,"temperatureMax":71.39,"temperatureMaxTime":1443211200,"apparentTemperatureMin":49.06,"apparentTemperatureMinTime":1443175200,"apparentTemperatureMax":71.39,"apparentTemperatureMaxTime":1443211200,"dewPoint":47.31,"humidity":0.64,"windSpeed":0.68,"windBearing":38,"visibility":9.83,"cloudCover":0.44,"pressure":1028.65,"ozone":271.38}]},"flags":{"sources":["isd","sref","darksky","fnmoc","rtma","rap","nam","cmc","gfs","madis","lamp"],"isd-stations":["725180-14735","744994-04741","999999-04741","999999-14735","999999-14796"],"darksky-stations":["KENX"],"madis-stations":["APBN6","AS107","AU087","C5574","C8192","D3501","D6593","D8530","D9775","E0122","E0250","E0288","E2695","E5102","KALB","NY002"],"lamp-stations":["KALB","KAQW","KDDH","KPSF","KSCH"],"units":"us"}}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.forecast.io/forecast/your_api_key/42.7243,-73.6927,1443199409
-  recorded_at: Fri, 25 Sep 2015 16:43:30 GMT
+      effective_url: https://api.forecast.io/forecast/your_api_key/42.7243,-73.6927,1443199368
+  recorded_at: Fri, 25 Sep 2015 16:43:29 GMT
 recorded_with: VCR 2.9.3

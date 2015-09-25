@@ -1,44 +1,26 @@
 require 'spec_helper'
 
 describe Darksky::API do
-  let(:darksky_api) { Darksky::API.new('this-is-your-dark-sky-api-key') }
+  let(:darksky_api) { Darksky::API.new('your_api_key') }
 
   describe '#forecast' do
-    it 'should return a valid forecast for a latitude and longitude' do    
+    specify 'should return a valid forecast for a latitude and longitude' do
       VCR.use_cassette('forecast', :record => :once) do
-        forecast = darksky_api.forecast('42.7243','-73.6927')
-        forecast['currentSummary'].should == 'clear'
-        forecast['radarStation'].should == 'enx'
+        Timecop.freeze(Time.at(1443199409)) do
+          forecast = darksky_api.forecast '42.7243', '-73.6927'
+
+          expect(forecast['currently']['summary']).to eq('Mostly Cloudy')
+          expect(forecast['flags']['units']).to eq('us')
+        end
       end
     end
-  end
 
-  describe '#brief_forecast' do
-    it 'should return a valid brief forecast for a latitude and longitude' do    
-      VCR.use_cassette('brief_forecast', :record => :once) do
-        forecast = darksky_api.brief_forecast('42.7243','-73.6927')
-        forecast['currentSummary'].should == 'clear'
-        forecast['hourSummary'].should == 'clear'
-      end
-    end
-  end
+    specify 'should return a valid forecast for a latitude, longitude, and time' do
+      VCR.use_cassette('forecast_with_time', :record => :once) do
+        now      = 1443199368
+        forecast = darksky_api.forecast '42.7243', '-73.6927', now
 
-  describe '#precipitation' do
-    it 'should return forecasts for a collection of arbitrary points' do
-      VCR.use_cassette('precipitation', :record => :once) do
-        precipitation = darksky_api.precipitation(['42.7','-73.6',1325607100,'42.0','-73.0',1325607791])
-        precipitation['precipitation'].size.should == 2
-        precipitation['precipitation'].first['probability'].should == 0
-        precipitation['precipitation'].first['type'].should == 'rain'
-      end
-    end
-  end
-
-  describe '#interesting' do
-    it 'should return a list of interesting storms happening right now' do
-      VCR.use_cassette('interesting', :record => :once) do
-        interesting_storms = darksky_api.interesting
-        interesting_storms.size.should == 1
+        expect(forecast['currently']['time']).to eq(now)
       end
     end
   end
