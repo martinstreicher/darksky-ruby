@@ -22,9 +22,10 @@ module Darksky
     # @param longitude [String] Longitude in decimal degrees.
     # @param time [Integer] Time expressed in Epoch time (seconds since midnight GMT on Jan 1, 1970).
     # @param option [Hash] (Optional) Options to be passed to the Typhoeus::Request
-    def forecast(latitude, longitude, time = Time.now.to_i, options = {})
-      url_string = url latitude, longitude, time
-      response   = Typhoeus::Request.get url_string, DEFAULT_OPTIONS.dup.merge(options)
+    def forecast(latitude, longitude, time = nil, options = {})
+      time      ||= Time.now.to_i
+      url_string  = url latitude, longitude, time
+      response    = Typhoeus::Request.get url_string, DEFAULT_OPTIONS.dup.merge(options)
       JSON.parse(response.body) if response.code == 200
     end
 
